@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header class="nav-heading">HTML<br>Documentation</header>
+        <ul class="nav-links">
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
+            <li><a href="#the_head" class="nav-link">The Head</a></li>
+            <li><a href="#html_text_fundamentals" class="nav-link">HTML Text Fundamentals</a></li>
+            <li><a href="#creating_hyperlinks" class="nav-link">Creating Hyperlinks</a></li>
+            <li><a href="#document_and_website_structure" class="nav-link">Document and Website Structure</a></li>
+            <li><a href="#reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header class="main-section--heading">Introduction</header>
+            <p class="main-section--description">
+                At its heart, HTML is a language made up of elements, which can be applied to pieces
+                of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted
+                list? Is it part of a table?), structure a document into logical sections (Does it have a
+                header? Three columns of content? A navigation menu?), and embed content such as images and
+                videos into a page. This module will introduce the first two of these and introduce fundamental 
+                concepts and syntax you need to know to understand HTML.
+            </p>
+        </section>
+        <section class="main-section" id="getting_started">
+            <header class="main-section--heading">Getting Started</header>
+            <p class="main-section--description">
+                HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the
+                web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML 
+                consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content 
+                to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to 
+                connect to another page, italicize words, and so on.
+            </p>
+            <h3 class="main-section--inner-heading">The anatomy of an HTML element</h3>
+            <p class="main-section--description">
+                <code>&lt;p&gt;Hello, I'm a paragraph&lt;/p&gt;</code>
+            </p>
+            <ul>
+                <li class="description-list">
+                    The opening tag: This consists of the name of the element (in this example, p for paragraph), 
+                    wrapped in opening and closing angle brackets. This opening tag marks where the element begins 
+                    or starts to take effect. In this example, it precedes the start of the paragraph text.
+                </li>
+                <li class="description-list">
+                    The content: This is the content of the element. In this example, it is the paragraph text.
+                </li>
+                <li class="description-list">
+                    The closing tag: This is the same as the opening tag, except that it includes a forward slash before 
+                    the element name. This marks where the element ends. Failing to include a closing tag is a common 
+                    beginner error that can produce peculiar results.
+                </li>
+            </ul>
+            <p class="main-section--description">
+                The element is the opening tag, followed by content, followed by the closing tag.
+            </p>
+        </section>
+        <section class="main-section" id="the_head">
+            <header class="main-section--heading">The Head</header>
+            <p class="main-section--description">
+                The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. 
+                It contains information such as the page title, links to CSS (if you choose to style your HTML content 
+                with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and 
+                important keywords that describe the document). Web browsers use information contained in the head to 
+                render the HTML document correctly. In this article we'll cover all of the above and more, in order 
+                to give you a good basis for working with markup.
+            </p>
+            <p class="main-section--description">
+                <code>
+                    <span class="text-indent-0">&lt;!doctype html&gt;</span>
+                    <span class="text-indent-0">&lt;html lang="en-US"&gt;</span>
+                    <span class="text-indent-0">&lt;head&gt;</span>
+                    <span class="text-indent-1">&lt;meta charset="utf-8" /&gt;</span>
+                    <span class="text-indent-1">&lt;title>My test page&lt;/title&gt;</span>
+                    <span class="text-indent-0">&lt;/head&gt;</span>
+                    <span class="text-indent-0">&lt;body&gt;</span>
+                    <span class="text-indent-1">&lt;p&gt;This is my page&lt;/p&gt;</span>
+                    <span class="text-indent-0">&lt;/body&gt;</span>
+                    <span class="text-indent-0">&lt;/html&gt;</span>
+                </code>
+            </p>
+            <p class="main-section--description">
+                The HTML head is the contents of the &lt;head&gt; element. Unlike the contents of the &lt;body&gt; element (which are displayed 
+                on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job 
+                is to contain metadata about the document. In the above example, the head is quite small. In larger pages however, the head can
+                get quite large.
+            </p>
+            <h3 class="main-section--inner-heading">Adding a title</h3>
+            <p class="main-section--description">
+                We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however 
+                can get confused with the h1 element, which is used to add a top level heading to your body content — this 
+                is also sometimes referred to as the page title. But they are different things! The h1 element appears on the page 
+                when loaded in the browser — generally this should be used once per page, to mark up the title of your page content 
+                (the story title, or news headline, or whatever is appropriate to your usage.) The &lt;title&gt; element is metadata that 
+                represents the title of the overall HTML document (not the document's content.)
+            </p>
+        </section>
+        <section class="main-section" id="html_text_fundamentals">
+            <header class="main-section--heading">HTML Text Fundamentals</header>
+            <p class="main-section--description">
+                One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer 
+                intends. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, 
+                emphasizing words, creating lists, and more.
+            </p>
+            <h3 class="main-section--inner-heading">The basics: headings and paragraphs</h3>
+            <p class="main-section--description">
+                Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college 
+                textbook, a magazine, etc. Structured content makes the reading experience easier and more enjoyable. In HTML, each
+                paragraph has to be wrapped in a &lt;p&gt; element, like so:
+            </p>
+            <p class="main-section--description">
+                <code>
+                    &lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;
+                </code>
+            </p>
+            <p class="main-section--description">
+                Each heading has to be wrapped in a heading element:
+            </p>
+            <p class="main-section--description">
+                <code>
+                    &lt;h1&gt;I am the title of the story.&lt;/h1&gt;
+                </code>
+            </p>
+            <p class="main-section--description">
+                There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in 
+                the document; &lt;h1&gt; represents the main heading, &lt;h2&gt; represents subheadings, &lt;h3&gt; represents sub-subheadings, 
+                and so on.
+            </p>
+        </section>
+        <section class="main-section" id="creating_hyperlinks">
+            <header class="main-section--heading">Creating Hyperlinks</header>
+            <p class="main-section--description">
+                Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of the Web since 
+                the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or 
+                resources, link to specific parts of documents, or make apps available at a web address. Almost any web content 
+                can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).
+            </p>
+            <h3 class="main-section--inner-heading">Anatomy of a link</h3>
+            <p class="main-section--description">
+                A basic link is created by wrapping the text or other content inside an &lt;a&gt; element and using the href attribute,
+                also known as a Hypertext Reference, or target, that contains the web address.
+            </p>
+            <p class="main-section--description">
+                <code>
+                    &lt;p&gt;I am creating a link to &lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla Homepage&lt;/a&gt;.&lt;/p&gt;
+                </code>
+            </p>
+            <p class="main-section--description">
+                This gives us the following result:<br>
+                I'm creating a link to <a href="https://www.mozilla.org/en-US/" class="description-link">the Mozilla Homepage</a>.
+            </p>
+        </section>
+        <section class="main-section" id="document_and_website_structure">
+            <header class="main-section--heading">Document and Website Structure</header>
+            <p class="main-section--description">
+                Webpages can and will look pretty different from one another, but they all tend to share similar standard components, 
+                unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly 
+                structured:
+            </p>
+            <ul>
+                <li class="description-list">
+                    <span class="bold">header:</span> Usually a big strip across the top with a big heading, logo, and perhaps a tagline.
+                    This usually stays the same from one webpage to another.
+                </li>
+                <li class="description-list">
+                    <span class="bold">navigation bar:</span> Links to the site's main sections; usually represented by menu buttons, links, 
+                    or tabs. Like the header, this content usually remains consistent from one webpage to another — having
+                    inconsistent navigation on your website will just lead to confused, frustrated users. Many web designers consider 
+                    the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in 
+                    fact, some also argue that having the two separate is better for accessibility, as screen readers can read the 
+                    two features better if they are separate.
+                </li>
+                <li class="description-list">
+                    <span class="bold">main content:</span> A big area in the center that contains most of the unique content 
+                    of a given webpage, for example, the video you want to watch, or the main story you're reading, or the 
+                    map you want to view, or the news headlines, etc. This is the one part of the website that definitely will 
+                    vary from page to page!
+                </li>
+                <li class="description-list">
+                    <span class="bold">sidebar:</span> Some peripheral info, links, quotes, ads, etc. Usually, this is contextual to 
+                    what is contained in the main content (for example on a news article page, the sidebar might contain the author's 
+                    bio, or links to related articles) but there are also cases where you'll find some recurring elements like a 
+                    secondary navigation system.
+                </li>
+                <li class="description-list">
+                    <span class="bold">footer:</span> A strip across the bottom of the page that generally contains fine print, 
+                    copyright notices, or contact info. It's a place to put common information (like the header) but usually, that 
+                    information is not critical or secondary to the website itself. The footer is also sometimes used for SEO 
+                    purposes, by providing links for quick access to popular content.
+                </li>
+            </ul>
+            <h3 class="main-section--inner-heading">HTML fot structuring content</h3>
+            <p class="main-section--description">
+                Some websites have more columns, some are a lot more complex, but you get the idea. With the right CSS, you could 
+                use pretty much any elements to wrap around the different sections and get it looking how you wanted, but as 
+                discussed before, we need to respect semantics and use the right element for the right job. This is because visuals 
+                don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts 
+                of the content, like the navigation menu and related links, but what about visually impaired people for example, 
+                who might not find concepts like "pink" and "large font" very useful? In your HTML code, you can mark up sections 
+                of content based on their functionality — you can use elements that represent the sections of content described 
+                above unambiguously, and assistive technologies like screen readers can recognize those elements and help with 
+                tasks like "find the main navigation", or "find the main content." To implement such semantic mark up, HTML provides 
+                dedicated tags that you can use to represent such sections, for example:
+            </p>
+            <ul>
+                <li class="description-list">
+                    <span class="bold">header:</span> <code>&lt;header&gt;</code>.
+                </li>
+                <li class="description-list">
+                    <span class="bold">navigation bar:</span> <code>&lt;nav&gt;</code>.
+                </li>
+                <li class="description-list">
+                    <span class="bold">main content:</span> <code>&lt;main&gt;</code>, with various content subsections represented by
+                    <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> and <code>&lt;div&gt;</code> elements.
+                </li>
+                <li class="description-list">
+                    <span class="bold">sidebar:</span> <code>&lt;aside&gt;</code>; often placed inside <code>&lt;main&gt;</code>.
+                </li>
+                <li class="description-list">
+                    <span class="bold">footer:</span> <code>&lt;footer&gt;</code>.
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="reference">
+            <header class="main-section--heading">Reference</header>
+            <p class="main-section--description">
+                All the documentation in this page is taken from 
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" class="description-link">MDN</a>
+                .
+            </p>
+        </section>
+    </main>
+</body>
+</html>

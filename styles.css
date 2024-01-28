@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(53, 49, 49);
+    color: white;
+}
+
+#navbar {
+    position: fixed;
+    min-width: 380px;
+    padding-left: 15px;
+}
+
+#main-doc {
+    position: absolute;
+    left: 460px;
+}
+
+@media (max-width: 850px) {
+    #navbar {
+        position: static;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    #main-doc {
+        position: absolute;
+        top: 600px;
+        left: 0;
+        padding: 30px;
+    }
+}
+
+h1, h2, h3 {
+    font-family: 'Krona One', sans-serif;
+}
+
+.nav-heading {
+    font-size: 2rem;
+}
+
+.nav-links {
+    top: 140px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.nav-link:hover {
+    background-color: rgb(161, 141, 141);
+}
+
+.main-section--heading {
+    font-size: 1.8rem;
+}
+
+.main-section--inner-heading {
+    font-size: 1.6rem;
+}
+
+.main-section--description,
+.description-list {
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.description-link {
+    color: white;
+    text-decoration: none;
+}
+
+.description-link:hover {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-indent-0,
+.text-indent-1 {
+    display: block;
+}
+
+.text-indent-1 {
+    text-indent: 1rem;
+}
